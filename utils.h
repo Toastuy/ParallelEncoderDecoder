@@ -1,11 +1,10 @@
 typedef struct workItem
 {
 	uint16_t id; // sequence number
-	int pos; // work queue position
 	char cmd; // cmd
 	uint16_t original_key; // input key
-	uint16_t encode_key; // encoded key by producer
-	double p_retval; // retval by producer
-	uint16_t decoded_key; //decoded key by consumer
-	double c_retval //retval by consumer
+	uint16_t encode_key; // encoded key by encoder
+	uint16_t decoded_key_1; //decoded key by decoder1
+	uint16_t decoded_key_2; //decoded key by decoder2
+	double d_retval //retval by decoder2
 } workItem;
