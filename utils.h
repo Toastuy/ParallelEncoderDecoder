@@ -1,9 +1,9 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <unistd.h>
 #include <time.h>
+#include <omp.h>
 
 typedef struct workItem
 {
