@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 typedef struct workItem
 {
 	uint16_t id; // sequence number
