@@ -1,3 +1,9 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <unistd.h>
+#include <time.h>
+
 typedef struct workItem
 {
 	uint16_t id; // sequence number
