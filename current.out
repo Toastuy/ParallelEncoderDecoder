@@ -1,0 +1,452 @@
+Read 10 elements.
+T(3) encoded workItemArray[3]=647
+T(5) encoded workItemArray[5]=648
+T(7) encoded workItemArray[7]=1119
+T(4) encoded workItemArray[4]=664
+T(8) encoded workItemArray[8]=401
+T(0) encoded workItemArray[0]=1193
+T(9) encoded workItemArray[9]=558
+T(2) encoded workItemArray[2]=848
+T(1) encoded workItemArray[1]=1000
+T(6) encoded workItemArray[6]=636
+Done encoding.
+T(5) decoded_1 workItemArray[5]=137
+T(3) decoded_1 workItemArray[3]=134
+T(9) decoded_1 workItemArray[9]=47
+T(7) decoded_1 workItemArray[7]=606
+T(0) decoded_1 workItemArray[0]=680
+T(8) decoded_1 workItemArray[8]=400
+T(4) decoded_1 workItemArray[4]=153
+T(1) decoded_1 workItemArray[1]=233
+T(2) decoded_1 workItemArray[2]=81
+T(6) decoded_1 workItemArray[6]=381
+Done decoding 1.
+T(6) decoded_2 workItemArray[6]=354
+T(1) decoded_2 workItemArray[1]=246
+T(7) decoded_2 workItemArray[7]=592
+T(5) decoded_2 workItemArray[5]=135
+T(3) decoded_2 workItemArray[3]=136
+T(9) decoded_2 workItemArray[9]=33
+T(0) decoded_2 workItemArray[0]=678
+T(4) decoded_2 workItemArray[4]=151
+T(2) decoded_2 workItemArray[2]=78
+T(8) decoded_2 workItemArray[8]=414
+Done decoding 2.
+SeqNum	cmd	enc	dec1	dec2	retval
+0	A	1193	680	678	968658681768889417728.000000
+1	B	1000	233	246	1413219134730693509120.000000
+2	B	848	81	78	1637376982485988540416.000000
+3	A	647	134	136	1514443973645267894272.000000
+4	A	664	153	151	1502897488127024693248.000000
+5	A	648	137	135	1468462885765787942912.000000
+6	B	636	381	354	1161639733723010170880.000000
+7	A	1119	606	592	996601619526235193344.000000
+8	A	401	400	414	1186838655775660834816.000000
+9	A	558	47	33	1682268546836697710592.000000
+total run time of program: 8 s
+Read 100 elements.
+T(10) encoded workItemArray[40]=1232
+T(2) encoded workItemArray[8]=401
+T(16) encoded workItemArray[64]=803
+T(23) encoded workItemArray[85]=941
+T(8) encoded workItemArray[32]=671
+T(11) encoded workItemArray[44]=284
+T(22) encoded workItemArray[82]=271
+T(13) encoded workItemArray[52]=1162
+T(26) encoded workItemArray[94]=603
+T(7) encoded workItemArray[28]=744
+T(24) encoded workItemArray[88]=1236
+T(0) encoded workItemArray[0]=1193
+T(3) encoded workItemArray[12]=919
+T(15) encoded workItemArray[60]=1047
+T(17) encoded workItemArray[67]=733
+T(1) encoded workItemArray[4]=664
+T(5) encoded workItemArray[20]=1420
+T(25) encoded workItemArray[91]=1012
+T(18) encoded workItemArray[70]=716
+T(12) encoded workItemArray[48]=1135
+T(21) encoded workItemArray[79]=788
+T(14) encoded workItemArray[56]=1482
+T(6) encoded workItemArray[24]=1519
+T(4) encoded workItemArray[16]=1403
+T(27) encoded workItemArray[97]=760
+T(19) encoded workItemArray[73]=968
+T(20) encoded workItemArray[76]=1416
+T(9) encoded workItemArray[36]=600
+T(16) encoded workItemArray[65]=423
+T(2) encoded workItemArray[9]=558
+T(8) encoded workItemArray[33]=950
+T(22) encoded workItemArray[83]=1001
+T(13) encoded workItemArray[53]=734
+T(26) encoded workItemArray[95]=350
+T(17) encoded workItemArray[68]=299
+T(3) encoded workItemArray[13]=565
+T(1) encoded workItemArray[5]=648
+T(24) encoded workItemArray[89]=1002
+T(10) encoded workItemArray[41]=1042
+T(5) encoded workItemArray[21]=1051
+T(18) encoded workItemArray[71]=665
+T(21) encoded workItemArray[80]=491
+T(23) encoded workItemArray[86]=1052
+T(14) encoded workItemArray[57]=787
+T(6) encoded workItemArray[25]=688
+T(11) encoded workItemArray[45]=1528
+T(19) encoded workItemArray[74]=1144
+T(7) encoded workItemArray[29]=781
+T(15) encoded workItemArray[61]=928
+T(0) encoded workItemArray[1]=1000
+T(25) encoded workItemArray[92]=1438
+T(12) encoded workItemArray[49]=1277
+T(4) encoded workItemArray[17]=580
+T(27) encoded workItemArray[98]=886
+T(20) encoded workItemArray[77]=856
+T(9) encoded workItemArray[37]=694
+T(2) encoded workItemArray[10]=895
+T(16) encoded workItemArray[66]=605
+T(8) encoded workItemArray[34]=414
+T(22) encoded workItemArray[84]=408
+T(13) encoded workItemArray[54]=398
+T(26) encoded workItemArray[96]=416
+T(11) encoded workItemArray[46]=1177
+T(7) encoded workItemArray[30]=958
+T(18) encoded workItemArray[72]=1125
+T(15) encoded workItemArray[62]=1058
+T(21) encoded workItemArray[81]=421
+T(17) encoded workItemArray[69]=872
+T(1) encoded workItemArray[6]=636
+T(14) encoded workItemArray[58]=1137
+T(23) encoded workItemArray[87]=1264
+T(3) encoded workItemArray[14]=1229
+T(6) encoded workItemArray[26]=739
+T(24) encoded workItemArray[90]=655
+T(25) encoded workItemArray[93]=1141
+T(10) encoded workItemArray[42]=1354
+T(5) encoded workItemArray[22]=986
+T(12) encoded workItemArray[50]=360
+T(19) encoded workItemArray[75]=1140
+T(0) encoded workItemArray[2]=848
+T(2) encoded workItemArray[11]=375
+T(8) encoded workItemArray[35]=368
+T(27) encoded workItemArray[99]=570
+T(4) encoded workItemArray[18]=1453
+T(9) encoded workItemArray[38]=822
+T(20) encoded workItemArray[78]=836
+T(14) encoded workItemArray[59]=507
+T(11) encoded workItemArray[47]=493
+T(1) encoded workItemArray[7]=1119
+T(3) encoded workItemArray[15]=600
+T(13) encoded workItemArray[55]=934
+T(10) encoded workItemArray[43]=695
+T(12) encoded workItemArray[51]=546
+T(6) encoded workItemArray[27]=1280
+T(7) encoded workItemArray[31]=962
+T(0) encoded workItemArray[3]=647
+T(15) encoded workItemArray[63]=635
+T(4) encoded workItemArray[19]=260
+T(5) encoded workItemArray[23]=917
+T(9) encoded workItemArray[39]=760
+Done encoding.
+T(8) decoded_1 workItemArray[32]=158
+T(17) decoded_1 workItemArray[67]=220
+T(22) decoded_1 workItemArray[82]=270
+T(1) decoded_1 workItemArray[4]=153
+T(7) decoded_1 workItemArray[28]=233
+T(16) decoded_1 workItemArray[64]=802
+T(15) decoded_1 workItemArray[60]=534
+T(24) decoded_1 workItemArray[88]=725
+T(11) decoded_1 workItemArray[44]=285
+T(10) decoded_1 workItemArray[40]=721
+T(3) decoded_1 workItemArray[12]=918
+T(13) decoded_1 workItemArray[52]=651
+T(0) decoded_1 workItemArray[0]=680
+T(26) decoded_1 workItemArray[94]=90
+T(2) decoded_1 workItemArray[8]=400
+T(23) decoded_1 workItemArray[85]=940
+T(5) decoded_1 workItemArray[20]=653
+T(6) decoded_1 workItemArray[24]=750
+T(19) decoded_1 workItemArray[73]=201
+T(27) decoded_1 workItemArray[97]=505
+T(20) decoded_1 workItemArray[76]=649
+T(18) decoded_1 workItemArray[70]=461
+T(9) decoded_1 workItemArray[36]=345
+T(21) decoded_1 workItemArray[79]=21
+T(14) decoded_1 workItemArray[56]=715
+T(12) decoded_1 workItemArray[48]=878
+T(4) decoded_1 workItemArray[16]=634
+T(25) decoded_1 workItemArray[91]=245
+T(8) decoded_1 workItemArray[33]=951
+T(22) decoded_1 workItemArray[83]=1000
+T(16) decoded_1 workItemArray[65]=422
+T(1) decoded_1 workItemArray[5]=137
+T(17) decoded_1 workItemArray[68]=298
+T(3) decoded_1 workItemArray[13]=52
+T(24) decoded_1 workItemArray[89]=1003
+T(13) decoded_1 workItemArray[53]=223
+T(2) decoded_1 workItemArray[9]=47
+T(26) decoded_1 workItemArray[95]=351
+T(7) decoded_1 workItemArray[29]=12
+T(5) decoded_1 workItemArray[21]=538
+T(11) decoded_1 workItemArray[45]=761
+T(10) decoded_1 workItemArray[41]=787
+T(15) decoded_1 workItemArray[61]=161
+T(0) decoded_1 workItemArray[1]=233
+T(6) decoded_1 workItemArray[25]=177
+T(18) decoded_1 workItemArray[71]=152
+T(14) decoded_1 workItemArray[57]=786
+T(21) decoded_1 workItemArray[80]=490
+T(8) decoded_1 workItemArray[34]=415
+T(22) decoded_1 workItemArray[84]=409
+T(16) decoded_1 workItemArray[66]=92
+T(26) decoded_1 workItemArray[96]=417
+T(2) decoded_1 workItemArray[10]=894
+T(13) decoded_1 workItemArray[54]=399
+T(19) decoded_1 workItemArray[74]=633
+T(23) decoded_1 workItemArray[86]=797
+T(20) decoded_1 workItemArray[77]=89
+T(7) decoded_1 workItemArray[30]=959
+T(1) decoded_1 workItemArray[6]=381
+T(3) decoded_1 workItemArray[14]=972
+T(15) decoded_1 workItemArray[62]=547
+T(11) decoded_1 workItemArray[46]=664
+T(17) decoded_1 workItemArray[69]=105
+T(4) decoded_1 workItemArray[17]=325
+T(9) decoded_1 workItemArray[37]=439
+T(25) decoded_1 workItemArray[92]=671
+T(12) decoded_1 workItemArray[49]=1020
+T(24) decoded_1 workItemArray[90]=398
+T(27) decoded_1 workItemArray[98]=119
+T(6) decoded_1 workItemArray[26]=226
+T(18) decoded_1 workItemArray[72]=612
+T(14) decoded_1 workItemArray[58]=624
+T(8) decoded_1 workItemArray[35]=369
+T(21) decoded_1 workItemArray[81]=420
+T(2) decoded_1 workItemArray[11]=374
+T(23) decoded_1 workItemArray[87]=753
+T(5) decoded_1 workItemArray[22]=219
+T(10) decoded_1 workItemArray[42]=587
+T(25) decoded_1 workItemArray[93]=628
+T(12) decoded_1 workItemArray[50]=361
+T(0) decoded_1 workItemArray[2]=81
+T(14) decoded_1 workItemArray[59]=506
+T(1) decoded_1 workItemArray[7]=606
+T(11) decoded_1 workItemArray[47]=492
+T(3) decoded_1 workItemArray[15]=89
+T(13) decoded_1 workItemArray[55]=167
+T(19) decoded_1 workItemArray[75]=885
+T(4) decoded_1 workItemArray[18]=684
+T(0) decoded_1 workItemArray[3]=134
+T(10) decoded_1 workItemArray[43]=182
+T(12) decoded_1 workItemArray[51]=35
+T(27) decoded_1 workItemArray[99]=315
+T(20) decoded_1 workItemArray[78]=69
+T(7) decoded_1 workItemArray[31]=195
+T(6) decoded_1 workItemArray[27]=513
+T(15) decoded_1 workItemArray[63]=378
+T(9) decoded_1 workItemArray[38]=55
+T(5) decoded_1 workItemArray[23]=148
+T(4) decoded_1 workItemArray[19]=261
+T(9) decoded_1 workItemArray[39]=505
+Done decoding 1.
+T(9) decoded_2 workItemArray[36]=326
+T(10) decoded_2 workItemArray[40]=735
+T(4) decoded_2 workItemArray[16]=613
+T(1) decoded_2 workItemArray[4]=151
+T(11) decoded_2 workItemArray[44]=275
+T(8) decoded_2 workItemArray[32]=144
+T(3) decoded_2 workItemArray[12]=920
+T(0) decoded_2 workItemArray[0]=678
+T(25) decoded_2 workItemArray[91]=234
+T(7) decoded_2 workItemArray[28]=231
+T(12) decoded_2 workItemArray[48]=881
+T(2) decoded_2 workItemArray[8]=414
+T(19) decoded_2 workItemArray[73]=214
+T(20) decoded_2 workItemArray[76]=662
+T(18) decoded_2 workItemArray[70]=466
+T(16) decoded_2 workItemArray[64]=812
+T(21) decoded_2 workItemArray[79]=10
+T(14) decoded_2 workItemArray[56]=724
+T(26) decoded_2 workItemArray[94]=84
+T(24) decoded_2 workItemArray[88]=731
+T(6) decoded_2 workItemArray[24]=753
+T(27) decoded_2 workItemArray[97]=486
+T(23) decoded_2 workItemArray[85]=930
+T(5) decoded_2 workItemArray[20]=658
+T(17) decoded_2 workItemArray[67]=210
+T(22) decoded_2 workItemArray[82]=256
+T(13) decoded_2 workItemArray[52]=645
+T(15) decoded_2 workItemArray[60]=536
+T(10) decoded_2 workItemArray[41]=780
+T(4) decoded_2 workItemArray[17]=346
+T(1) decoded_2 workItemArray[5]=135
+T(11) decoded_2 workItemArray[45]=742
+T(8) decoded_2 workItemArray[33]=953
+T(7) decoded_2 workItemArray[29]=19
+T(3) decoded_2 workItemArray[13]=58
+T(25) decoded_2 workItemArray[92]=640
+T(12) decoded_2 workItemArray[49]=995
+T(9) decoded_2 workItemArray[37]=424
+T(2) decoded_2 workItemArray[9]=33
+T(0) decoded_2 workItemArray[1]=246
+T(19) decoded_2 workItemArray[74]=631
+T(18) decoded_2 workItemArray[71]=150
+T(20) decoded_2 workItemArray[77]=70
+T(14) decoded_2 workItemArray[57]=796
+T(16) decoded_2 workItemArray[65]=424
+T(21) decoded_2 workItemArray[80]=484
+T(5) decoded_2 workItemArray[21]=532
+T(24) decoded_2 workItemArray[89]=997
+T(6) decoded_2 workItemArray[25]=191
+T(26) decoded_2 workItemArray[95]=337
+T(23) decoded_2 workItemArray[86]=770
+T(17) decoded_2 workItemArray[68]=292
+T(22) decoded_2 workItemArray[83]=998
+T(27) decoded_2 workItemArray[98]=104
+T(13) decoded_2 workItemArray[53]=209
+T(15) decoded_2 workItemArray[61]=190
+T(10) decoded_2 workItemArray[42]=596
+T(4) decoded_2 workItemArray[18]=691
+T(1) decoded_2 workItemArray[6]=354
+T(11) decoded_2 workItemArray[46]=662
+T(25) decoded_2 workItemArray[93]=634
+T(8) decoded_2 workItemArray[34]=401
+T(7) decoded_2 workItemArray[30]=945
+T(3) decoded_2 workItemArray[14]=979
+T(18) decoded_2 workItemArray[72]=618
+T(12) decoded_2 workItemArray[50]=359
+T(2) decoded_2 workItemArray[10]=880
+T(20) decoded_2 workItemArray[78]=90
+T(5) decoded_2 workItemArray[22]=196
+T(9) decoded_2 workItemArray[38]=40
+T(16) decoded_2 workItemArray[66]=82
+T(6) decoded_2 workItemArray[26]=236
+T(0) decoded_2 workItemArray[2]=78
+T(24) decoded_2 workItemArray[90]=401
+T(26) decoded_2 workItemArray[96]=431
+T(27) decoded_2 workItemArray[99]=292
+T(17) decoded_2 workItemArray[69]=118
+T(19) decoded_2 workItemArray[75]=874
+T(13) decoded_2 workItemArray[54]=385
+T(14) decoded_2 workItemArray[58]=638
+T(21) decoded_2 workItemArray[81]=426
+T(23) decoded_2 workItemArray[87]=767
+T(15) decoded_2 workItemArray[62]=557
+T(22) decoded_2 workItemArray[84]=407
+T(10) decoded_2 workItemArray[43]=184
+T(4) decoded_2 workItemArray[19]=267
+T(1) decoded_2 workItemArray[7]=592
+T(8) decoded_2 workItemArray[35]=383
+T(11) decoded_2 workItemArray[47]=482
+T(12) decoded_2 workItemArray[51]=45
+T(7) decoded_2 workItemArray[31]=220
+T(5) decoded_2 workItemArray[23]=139
+T(2) decoded_2 workItemArray[11]=376
+T(3) decoded_2 workItemArray[15]=87
+T(6) decoded_2 workItemArray[27]=542
+T(14) decoded_2 workItemArray[59]=500
+T(9) decoded_2 workItemArray[39]=486
+T(0) decoded_2 workItemArray[3]=136
+T(13) decoded_2 workItemArray[55]=184
+T(15) decoded_2 workItemArray[63]=357
+Done decoding 2.
+SeqNum	cmd	enc	dec1	dec2	retval
+0	A	1193	680	678	968658681768889417728.000000
+1	B	1000	233	246	1413219134730693509120.000000
+2	B	848	81	78	1637376982485988540416.000000
+3	A	647	134	136	1514443973645267894272.000000
+4	A	664	153	151	1502897488127024693248.000000
+5	A	648	137	135	1468462885765787942912.000000
+6	B	636	381	354	1161639733723010170880.000000
+7	A	1119	606	592	996601619526235193344.000000
+8	A	401	400	414	1186838655775660834816.000000
+9	A	558	47	33	1682268546836697710592.000000
+10	A	895	894	880	834513733825716551680.000000
+11	A	375	374	376	1214127114362251116544.000000
+12	A	919	918	920	811198487308144738304.000000
+13	A	565	52	58	1650678150242062041088.000000
+14	B	1229	972	979	799678787899134574592.000000
+15	A	600	89	87	1604322352470638985216.000000
+16	B	1403	634	613	967808024599398973440.000000
+17	B	580	325	346	1309641819021867745280.000000
+18	B	1453	684	691	987485230380866732032.000000
+19	A	260	261	267	1325632700596864679936.000000
+20	B	1420	653	658	978362983466719379456.000000
+21	A	1051	538	532	1098622612640513261568.000000
+22	B	986	219	196	1380532958979547725824.000000
+23	B	917	148	139	1534747829997591330816.000000
+24	B	1519	750	753	907115595658141630464.000000
+25	A	688	177	191	1446937239141688803328.000000
+26	A	739	226	236	1370868847118730657792.000000
+27	B	1280	513	542	1035672989420936364032.000000
+28	A	744	233	231	1413219134730693509120.000000
+29	B	781	12	19	1884682346489037717504.000000
+30	A	958	959	945	832830339063485562880.000000
+31	B	962	195	220	1482336994641520099328.000000
+32	A	671	158	144	1511066651559561265152.000000
+33	A	950	951	953	803407890799876374528.000000
+34	A	414	415	401	1154835357743988080640.000000
+35	A	368	369	383	1215479041782568189952.000000
+36	B	600	345	326	1272357446003682181120.000000
+37	B	694	439	424	1148840217881758400512.000000
+38	B	822	55	40	1681352018761992110080.000000
+39	B	760	505	486	1092138482286310064128.000000
+40	A	1232	721	735	922711028128340115456.000000
+41	B	1042	787	780	927108101029811060736.000000
+42	B	1354	587	596	1018308265492001587200.000000
+43	A	695	182	184	1448509030303554600960.000000
+44	A	284	285	275	1370708379465878077440.000000
+45	B	1528	761	742	917849628938694557696.000000
+46	A	1177	664	662	967766022326934831104.000000
+47	A	493	492	482	1119226046765188907008.000000
+48	B	1135	878	881	821727780722584453120.000000
+49	B	1277	1020	995	787276383047227015168.000000
+50	A	360	361	359	1208623559776310657024.000000
+51	A	546	35	45	1758522295563400773632.000000
+52	A	1162	651	645	939690045889911324672.000000
+53	A	734	223	209	1397725273422231764992.000000
+54	A	398	399	385	1207868712383770263552.000000
+55	B	934	167	184	1506134047204613029888.000000
+56	B	1482	715	724	932301036964319330304.000000
+57	A	787	786	796	897262431875536519168.000000
+58	A	1137	624	638	1028254215639716986880.000000
+59	A	507	506	500	1094591500877363412992.000000
+60	A	1047	534	536	1057753599730405212160.000000
+61	B	928	161	190	1430632352035230449664.000000
+62	A	1058	547	557	998433572319737937920.000000
+63	B	635	378	357	1219335536889181503488.000000
+64	A	803	802	812	892727703273375268864.000000
+65	A	423	422	424	1186996384705238269952.000000
+66	A	605	92	82	1613342152986302611456.000000
+67	A	733	220	210	1354819016304382443520.000000
+68	A	299	298	292	1287056957560003756032.000000
+69	B	872	105	118	1603168442222217789440.000000
+70	B	716	461	466	1150555860441186041856.000000
+71	A	665	152	150	1492194097291864047616.000000
+72	A	1125	612	618	989343847222342713344.000000
+73	B	968	201	214	1392920760868211785728.000000
+74	A	1144	633	631	972613932080282992640.000000
+75	B	1140	885	874	851756763479574446080.000000
+76	B	1416	649	662	979960845346587017216.000000
+77	B	856	89	70	1604322352470638985216.000000
+78	B	836	69	90	1685553785191859748864.000000
+79	B	788	21	10	1792358155589971607552.000000
+80	A	491	490	484	1043201094191031386112.000000
+81	A	421	420	426	1189599857693963583488.000000
+82	A	271	270	256	1319688099688211021824.000000
+83	A	1001	1000	998	811214109373833674752.000000
+84	A	408	409	407	1168937172287254036480.000000
+85	A	941	940	930	792105471055201959936.000000
+86	B	1052	797	770	860164953757890641920.000000
+87	A	1264	753	767	922248593770915823616.000000
+88	A	1236	725	731	936243859940284039168.000000
+89	A	1002	1003	997	807003637043402768384.000000
+90	B	655	398	401	1151506645792906805248.000000
+91	B	1012	245	234	1331545039029755183104.000000
+92	B	1438	671	640	968689960596336279552.000000
+93	A	1141	628	634	1002935112684654166016.000000
+94	A	603	90	84	1559848993146767147008.000000
+95	A	350	351	337	1240962667381090156544.000000
+96	A	416	417	431	1109499112226248196096.000000
+97	B	760	505	486	1092138482286310064128.000000
+98	B	886	119	104	1571008732189652680704.000000
+99	B	570	315	292	1263864277519105785856.000000
+total run time of program: 52 s

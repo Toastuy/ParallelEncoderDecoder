@@ -14,34 +14,161 @@ time_t producer_time, consumer_time;
 
 int main(int argc, char const *argv[])
 {
-    #pragma omp parallel num_threads(10)
-    {
-        int t_id = omp_get_thread_num();
-        printf("Hello from %d\n", t_id);
-    }
+    // #pragma omp parallel num_threads(10)
+    // {
+    //     int t_id = omp_get_thread_num();
+    //     printf("Hello from %d\n", t_id);
+    // }
+
+    // int N = 100;
+    // #pragma omp parallel
+    // #pragma omp for
+    // for (int i=0; i<N; i++) {
+    //     int t_id = omp_get_thread_num();
+    //     // printf("Thread %d, data %d\n", t_id,i);
+    // }
     
     // Time stuff init
     time_t start, end;
-    encode_time = decode_time = 0;
+    encode_finish = decode_finish = 0;
     time(&start);
     
     // Reader For Loop
-    // read
+    int readerNumber = 0;
+    workItem new;
+    while (scanf("%c %hd\n", &new.cmd, &new.original_key) == 2) {
+        if(new.cmd == 'X') {
+            // readerDone = true;
+            // pthread_exit(0);
+            break;
+        }
+        // printf("CMD: %c\n", new.cmd);
+        new.id = readerNumber;
+        workItemArray[readerNumber] = new;
+        readerNumber++;
+    }
+
+    printf("Read %d elements.\n", readerNumber);
+
     
     // Encode For Loop
     // encode
+    #pragma omp parallel
+    #pragma omp for
+    for (int i=0; i<readerNumber; i++) {
+        int t_id = omp_get_thread_num();
+        workItem item = workItemArray[i];
+
+        switch (item.cmd) {
+            case 'A':
+                item.encode_key = transformAE(item.original_key, &item.d_retval);
+                break;
+            case 'B':
+                item.encode_key = transformBE(item.original_key, &item.d_retval);
+                break;
+            case 'C':
+                item.encode_key = transformCE(item.original_key, &item.d_retval);
+                break;
+            case 'D':
+                item.encode_key = transformDE(item.original_key, &item.d_retval);
+                break;
+            case 'E':
+                item.encode_key = transformEE(item.original_key, &item.d_retval);
+                break;
+            default:
+                fprintf(stderr, "Oh shit\n");
+                exit(1);
+        }
+        workItemArray[i] = item;
+
+        printf("T(%d) encoded workItemArray[%d]=%d\n", t_id, i, item.encode_key);
+    }
+
+    printf("Done encoding.\n");
     
     // Decode 1 For Loop
-    // decode
+    #pragma omp parallel
+    #pragma omp for
+    for (int i=0; i<readerNumber; i++) {
+        workItem item = workItemArray[i];
+        int t_id = omp_get_thread_num();
+        switch (item.cmd) {
+            case 'A':
+                item.decoded_key_1 = transformAD1(item.encode_key, &item.d_retval);
+                break;
+            case 'B':
+                item.decoded_key_1 = transformBD1(item.encode_key, &item.d_retval);
+                break;
+            case 'C':
+                item.decoded_key_1 = transformCD1(item.encode_key, &item.d_retval);
+                break;
+            case 'D':
+                item.decoded_key_1 = transformDD1(item.encode_key, &item.d_retval);
+                break;
+            case 'E':
+                item.decoded_key_1 = transformED1(item.encode_key, &item.d_retval);
+                
+                break;
+            default:
+                fprintf(stderr, "Oh shit\n");
+                exit(1);
+        }
+
+        workItemArray[i] = item;
+
+        printf("T(%d) decoded_1 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_1);
+    }
     
+    printf("Done decoding 1.\n");
     // Decode 2 For Loop
-    // decode
+
+    #pragma omp parallel
+    #pragma omp for
+    for (int i=0; i<readerNumber; i++) {
+        workItem item = workItemArray[i];
+        int t_id = omp_get_thread_num();
+        switch (item.cmd) {
+            case 'A':
+                item.decoded_key_2 = transformAD2(item.decoded_key_1, &item.d_retval);
+                break;
+            case 'B':
+                item.decoded_key_2 = transformBD2(item.decoded_key_1, &item.d_retval);
+                break;
+            case 'C':
+                item.decoded_key_2 = transformCD2(item.decoded_key_1, &item.d_retval);
+                break;
+            case 'D':
+                item.decoded_key_2 = transformDD2(item.decoded_key_1, &item.d_retval);
+                break;
+            case 'E':
+                item.decoded_key_2 = transformED2(item.decoded_key_1, &item.d_retval);
+                break;
+            default:
+                fprintf(stderr, "Oh shit\n");
+                exit(1);
+        }
+        workItemArray[i] = item;
+
+        printf("T(%d) decoded_2 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_2);
+    }
+    
+    printf("Done decoding 2.\n");
     
     // Writer For Loop
-    // write
+    printf("SeqNum\tcmd\tenc\tdec1\tdec2\tretval\n");
+    for(int i = 0; i<readerNumber; i++) {
+        workItem item = workItemArray[i];
+        // remove this before submitting
+        if(item.original_key != item.decoded_key_2) {
+            printf("Bad!");
+            return -1;
+        }
+
+        printf("%d\t%c\t%d\t%d\t%d\t%lf\n", item.id, item.cmd, item.encode_key, item.decoded_key_1, item.decoded_key_2, item.d_retval);
+    }
     
     // Time stuff finish
     time(&end);
     total_time = end - start;
-    printf("total run time of program: %d s\n", end - start);
+    printf("total run time of program: %d s\n",(int) total_time);
 }
