@@ -21,7 +21,7 @@ echo at `date` >>current.err
 time $SLURM_SUBMIT_DIR/${PGM} <PCS_data_test1  >>current.out 2>current.err
 echo job ended at `date` >>current.err
 
-export SAVEDIR=${SLURM_SUBMIT_DIR}'/tests/data_test.'${SLURM_JOBID}
-mkdir ${SAVEDIR}
-mv current.out ${SAVEDIR}
-mv current.err ${SAVEDIR}
+# export SAVEDIR=${SLURM_SUBMIT_DIR}'/tests/data_test.'${SLURM_JOBID}
+# mkdir ${SAVEDIR}
+# mv current.out ${SAVEDIR}
+# mv current.err ${SAVEDIR}

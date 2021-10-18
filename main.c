@@ -11,6 +11,8 @@ int encode_time = 0;
 int decode_time = 0;
 int total_time = 0;
 
+
+// Encode the values
 uint16_t execute_encode_transform(char cmd, uint16_t original_key, double *d_retval){
     uint16_t encode_key;
     switch (cmd) {
@@ -36,6 +38,7 @@ uint16_t execute_encode_transform(char cmd, uint16_t original_key, double *d_ret
     return encode_key;
 }
 
+// Decode step 1
 uint16_t execute_decode_transform1(char cmd, uint16_t encode_key, double *d_retval){
     uint16_t decoded_key_1;
     switch (cmd) {
@@ -63,6 +66,7 @@ uint16_t execute_decode_transform1(char cmd, uint16_t encode_key, double *d_retv
 
 }
 
+// Decode step 2
 uint16_t execute_decode_transform2(char cmd, uint16_t dencoded_key_1, double *d_retval){
     uint16_t decoded_key_2;
     switch (cmd) {
