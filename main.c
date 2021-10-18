@@ -95,7 +95,7 @@ int main(int argc, char const *argv[])
     
     // Time stuff init
     time_t start, end, encode_start, encode_end, decode_start, decode_end;
-    encode_finish = decode_finish = 0;
+    encode_time = decode_time = 0;
     time(&start);
     
     // Reader For Loop
@@ -112,9 +112,6 @@ int main(int argc, char const *argv[])
         readerNumber++;
     }
 
-    printf("Read %d elements.\n", readerNumber);
-
-    
     // Encode time stuff
     time(&encode_start);
     
@@ -130,7 +127,7 @@ int main(int argc, char const *argv[])
 
         workItemArray[i] = item;
 
-        printf("T(%d) encoded workItemArray[%d]=%d\n", t_id, i, item.encode_key);
+        // printf("T(%d) encoded workItemArray[%d]=%d\n", t_id, i, item.encode_key);
     }
     
     // Encode time stuff
@@ -148,13 +145,10 @@ int main(int argc, char const *argv[])
     for (int i=0; i<readerNumber; i++) {
         workItem item = workItemArray[i];
         int t_id = omp_get_thread_num();
-
         item.decoded_key_1 = execute_decode_transform1(item.cmd, item.encode_key, &item.d_retval);
-
-
         workItemArray[i] = item;
 
-        printf("T(%d) decoded_1 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_1);
+        // printf("T(%d) decoded_1 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_1);
     }
     
     //printf("Done decoding 1.\n");
@@ -165,12 +159,9 @@ int main(int argc, char const *argv[])
     for (int i=0; i<readerNumber; i++) {
         workItem item = workItemArray[i];
         int t_id = omp_get_thread_num();
-
         item.decoded_key_2 = execute_decode_transform2(item.cmd, item.decoded_key_1, &item.d_retval);
-
         workItemArray[i] = item;
-
-        printf("T(%d) decoded_2 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_2);
+        // printf("T(%d) decoded_2 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_2);
     }
     
     // Decode Time Stuff
@@ -195,5 +186,5 @@ int main(int argc, char const *argv[])
     // Time stuff finish
     time(&end);
     total_time = end - start;
-    fprintf(stderr, "total run time of program: %d seconds\n",(int) total_time);
+    fprintf(stderr, "Total run time of program: %d seconds\n",(int) total_time);
 }
