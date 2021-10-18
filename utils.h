@@ -17,14 +17,6 @@ typedef struct workItem
 } workItem;
 
 
-/*
-d_retval = transformAE(original_key, encode_key);
-
-
-
-*/
-
-
 uint16_t transformAE(uint16_t input_val, double *retval);
 uint16_t transformAD1(uint16_t input_val, double *retval);
 uint16_t transformAD2(uint16_t input_val, double *retval);

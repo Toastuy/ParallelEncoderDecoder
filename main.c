@@ -120,25 +120,18 @@ int main(int argc, char const *argv[])
     time(&encode_start);
     
     // Encode For Loop
-    // encode
     #pragma omp parallel
     #pragma omp for
     for (int i=0; i<readerNumber; i++) {
-        int t_id = omp_get_thread_num();
         workItem item = workItemArray[i];
-
         item.encode_key = execute_encode_transform(item.cmd, item.original_key, &item.d_retval);
-
         workItemArray[i] = item;
-
-        // printf("T(%d) encoded workItemArray[%d]=%d\n", t_id, i, item.encode_key);
     }
     
     // Encode time stuff
     time(&encode_end);
     encode_time = encode_end - encode_start;
     fprintf(stderr, "Total Encode Time: %d seconds\n", encode_time);
-    //printf("Done encoding.\n");
     
     // Decode time stuff
     time(&decode_start);
@@ -148,34 +141,24 @@ int main(int argc, char const *argv[])
     #pragma omp for
     for (int i=0; i<readerNumber; i++) {
         workItem item = workItemArray[i];
-        int t_id = omp_get_thread_num();
         item.decoded_key_1 = execute_decode_transform1(item.cmd, item.encode_key, &item.d_retval);
         workItemArray[i] = item;
-
-        // printf("T(%d) decoded_1 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_1);
     }
-    
-    //printf("Done decoding 1.\n");
-    // Decode 2 For Loop
 
     #pragma omp parallel
     #pragma omp for
     for (int i=0; i<readerNumber; i++) {
         workItem item = workItemArray[i];
-        int t_id = omp_get_thread_num();
         item.decoded_key_2 = execute_decode_transform2(item.cmd, item.decoded_key_1, &item.d_retval);
         workItemArray[i] = item;
-        // printf("T(%d) decoded_2 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_2);
     }
     
     // Decode Time Stuff
     time(&decode_end);
     decode_time = decode_end - decode_start;
     fprintf(stderr, "Total Decode Time: %d seconds\n", decode_time);
-    //printf("Done decoding 2.\n");
     
     // Writer For Loop
-    printf("SeqNum\tcmd\tenc\tdec1\tdec2\tretval\n");
     for(int i = 0; i<readerNumber; i++) {
         workItem item = workItemArray[i];
         // remove this before submitting

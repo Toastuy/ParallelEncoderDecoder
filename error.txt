@@ -1,0 +1,3 @@
+Total Encode Time: 8 seconds
+Total Decode Time: 6 seconds
+Total run time of program: 14 seconds
