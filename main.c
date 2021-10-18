@@ -6,11 +6,10 @@
 workItem workItemArray[MAX_SIZE];
 
 // Time Stuff
-int input_finish = 0;
-int encode_finish = 0;
-int decode_finish = 0;
+int input_time = 0;
+int encode_time = 0;
+int decode_time = 0;
 int total_time = 0;
-time_t producer_time, consumer_time;
 
 uint16_t execute_encode_transform(char cmd, uint16_t original_key, double *d_retval){
     uint16_t encode_key;
@@ -95,7 +94,7 @@ int main(int argc, char const *argv[])
 {
     
     // Time stuff init
-    time_t start, end;
+    time_t start, end, encode_start, encode_end, decode_start, decode_end;
     encode_finish = decode_finish = 0;
     time(&start);
     
@@ -116,6 +115,9 @@ int main(int argc, char const *argv[])
     printf("Read %d elements.\n", readerNumber);
 
     
+    // Encode time stuff
+    time(&encode_start);
+    
     // Encode For Loop
     // encode
     #pragma omp parallel
@@ -130,8 +132,15 @@ int main(int argc, char const *argv[])
 
         printf("T(%d) encoded workItemArray[%d]=%d\n", t_id, i, item.encode_key);
     }
-
-    printf("Done encoding.\n");
+    
+    // Encode time stuff
+    time(&encode_end);
+    encode_time = encode_end - encode_start;
+    fprintf(stderr, "Total Encode Time: %d seconds\n", encode_time);
+    //printf("Done encoding.\n");
+    
+    // Decode time stuff
+    time(&decode_start);
     
     // Decode 1 For Loop
     #pragma omp parallel
@@ -148,7 +157,7 @@ int main(int argc, char const *argv[])
         printf("T(%d) decoded_1 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_1);
     }
     
-    printf("Done decoding 1.\n");
+    //printf("Done decoding 1.\n");
     // Decode 2 For Loop
 
     #pragma omp parallel
@@ -164,7 +173,11 @@ int main(int argc, char const *argv[])
         printf("T(%d) decoded_2 workItemArray[%d]=%d\n", t_id, i, item.decoded_key_2);
     }
     
-    printf("Done decoding 2.\n");
+    // Decode Time Stuff
+    time(&decode_end);
+    decode_time = decode_end - decode_start;
+    fprintf(stderr, "Total Decode Time: %d seconds\n", decode_time);
+    //printf("Done decoding 2.\n");
     
     // Writer For Loop
     printf("SeqNum\tcmd\tenc\tdec1\tdec2\tretval\n");
@@ -182,5 +195,5 @@ int main(int argc, char const *argv[])
     // Time stuff finish
     time(&end);
     total_time = end - start;
-    printf("total run time of program: %d s\n",(int) total_time);
+    fprintf(stderr, "total run time of program: %d seconds\n",(int) total_time);
 }
