@@ -108,7 +108,7 @@ int main(int argc, char const *argv[])
             // pthread_exit(0);
             break;
         }
-        new.id = readerNumber;
+        new.id = readerNumber + 1;
         workItemArray[readerNumber] = new;
         readerNumber++;
     }
