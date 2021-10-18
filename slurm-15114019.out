@@ -1,0 +1,9 @@
+job started at Thu Oct 7 14:13:21 EDT 2021
+on compute node o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123 o0123
+
+real	38m30.848s
+user	781m20.141s
+sys	0m45.804s
+mkdir: cannot create directory ‘/users/PAS1833/halll2586/5441Lab2/tests/data_test.15114019’: No such file or directory
+mv: cannot move ‘current.out’ to ‘/users/PAS1833/halll2586/5441Lab2/tests/data_test.15114019’: No such file or directory
+mv: cannot move ‘current.err’ to ‘/users/PAS1833/halll2586/5441Lab2/tests/data_test.15114019’: No such file or directory
