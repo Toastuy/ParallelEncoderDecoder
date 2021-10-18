@@ -16,19 +16,19 @@ uint16_t execute_encode_transform(char cmd, uint16_t original_key, double *d_ret
     uint16_t encode_key;
     switch (cmd) {
             case 'A':
-                encode_key = transformAE(original_key, &d_retval);
+                encode_key = transformAE(original_key, d_retval);
                 break;
             case 'B':
-                encode_key = transformBE(original_key, &d_retval);
+                encode_key = transformBE(original_key, d_retval);
                 break;
             case 'C':
-                encode_key = transformCE(original_key, &d_retval);
+                encode_key = transformCE(original_key, d_retval);
                 break;
             case 'D':
-                encode_key = transformDE(original_key, &d_retval);
+                encode_key = transformDE(original_key, d_retval);
                 break;
             case 'E':
-                encode_key = transformEE(original_key, &d_retval);
+                encode_key = transformEE(original_key, d_retval);
                 break;
             default:
                 fprintf(stderr, "Oh shit\n");
@@ -41,19 +41,19 @@ uint16_t execute_decode_transform1(char cmd, uint16_t encode_key, double *d_retv
     uint16_t decoded_key_1;
     switch (cmd) {
             case 'A':
-                decoded_key_1 = transformAD1(encode_key, &d_retval);
+                decoded_key_1 = transformAD1(encode_key, d_retval);
                 break;
             case 'B':
-                decoded_key_1 = transformBD1(encode_key, &d_retval);
+                decoded_key_1 = transformBD1(encode_key, d_retval);
                 break;
             case 'C':
-                decoded_key_1 = transformCD1(encode_key, &d_retval);
+                decoded_key_1 = transformCD1(encode_key, d_retval);
                 break;
             case 'D':
-                decoded_key_1 = transformDD1(encode_key, &d_retval);
+                decoded_key_1 = transformDD1(encode_key, d_retval);
                 break;
             case 'E':
-                decoded_key_1 = transformED1(encode_key, &d_retval);
+                decoded_key_1 = transformED1(encode_key, d_retval);
                 
                 break;
             default:
@@ -68,19 +68,19 @@ uint16_t execute_decode_transform2(char cmd, uint16_t dencoded_key_1, double *d_
     uint16_t decoded_key_2;
     switch (cmd) {
             case 'A':
-                decoded_key_2 = transformAD2(dencoded_key_1, &d_retval);
+                decoded_key_2 = transformAD2(dencoded_key_1, d_retval);
                 break;
             case 'B':
-                decoded_key_2 = transformBD2(dencoded_key_1, &d_retval);
+                decoded_key_2 = transformBD2(dencoded_key_1, d_retval);
                 break;
             case 'C':
-                decoded_key_2 = transformCD2(dencoded_key_1, &d_retval);
+                decoded_key_2 = transformCD2(dencoded_key_1, d_retval);
                 break;
             case 'D':
-                decoded_key_2 = transformDD2(dencoded_key_1, &d_retval);
+                decoded_key_2 = transformDD2(dencoded_key_1, d_retval);
                 break;
             case 'E':
-                decoded_key_2 = transformED2(dencoded_key_1, &d_retval);
+                decoded_key_2 = transformED2(dencoded_key_1, d_retval);
                 
                 break;
             default:
